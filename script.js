@@ -19,6 +19,43 @@ function cadastrarCarro() {
     }
 }
 
+function cadastrarCarroBD() {
+    const placa = document.getElementById('fplaca').value
+    const marca = document.getElementById('fmarca').value
+    const modelo = document.getElementById('fmodelo').value
+
+    const carroJson = {
+        placa: placa,
+        marca: marca,
+        modelo: modelo
+    }
+
+
+    if (placa.value != '' && marca.value != '' && modelo.value != '') {
+
+        $.ajax({
+            url: 'db/crudCarro.php',
+            type: 'POST',
+            data: carroJson,
+            dataType: "json",
+            success: function (response) {
+                if (response.error) {
+                    return alert("Error ", response.msg)
+                }
+            }
+        })
+
+        placa.value = ''
+        marca.value = ''
+        modelo.value = ''
+        $('#cadastrarModal').modal('hide')
+        atualizarTabela()
+        alert("Veículo cadastrado com sucesso!")
+    } else {
+        alert("Não pode haver campos vazios!")
+    }
+}
+
 function editarCarro(carro) {
     document.getElementById('modalPlaca').value = carro[0]
     document.getElementById('modalMarca').value = carro[1]
@@ -80,7 +117,7 @@ function atualizarTabela() {
         deleteButton.onclick = function () { excluirCarro(array[i][0]) }
         deleteButton.style.marginRight = "20px"
         deleteCell.appendChild(deleteButton)
-        
+
         /*
         const editCell = document.createElement("td")
         const editButton = document.createElement("button")

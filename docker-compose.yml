@@ -1,0 +1,34 @@
+version: "3.3"
+
+services: 
+
+  container_db:
+    container_name: sql_server_gauss
+    image: ryckrodriguez/school_database_sqlsrv
+    ports:
+      - "1433:1433"
+    volumes:
+      - type: volume
+        source: db_sql_srv
+        target: /var/opt/mssql
+    networks:
+      - gauss-network
+
+  php:
+    container_name: web_gaussFleet
+    image: ryckrodriguez/gaussfleet
+    ports:
+      - "8888:80"
+    volumes:
+      - ./:/var/www/html
+    networks: 
+      - gauss-network
+    depends_on:
+      - container_db
+
+networks: 
+  gauss-network:
+    driver: bridge
+
+volumes:
+  db_sql_srv:
