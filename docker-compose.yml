@@ -1,18 +1,19 @@
-version: "3.3"
-
 services: 
-
   container_db:
     container_name: sql_server_gauss
-    image: ryckrodriguez/school_database_sqlsrv
+    image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
       - "1433:1433"
+    environment:
+      SA_PASSWORD: "YourStrongP@ssw0rd!"  # Definir uma senha forte com no mínimo 8 caracteres
+      ACCEPT_EULA: "Y"
     volumes:
       - type: volume
         source: db_sql_srv
         target: /var/opt/mssql
     networks:
       - gauss-network
+    privileged: true
 
   php:
     container_name: web_gaussFleet
