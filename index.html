@@ -18,7 +18,7 @@
     <div style="background-color: #008148; padding: 1px; text-align: center;">
         <h1>Registro de Carros</h1>
         <div style="padding-bottom: 15px; ">
-            <button type="button" data-toggle="modal" data-target="#cadastrarModal" style="background-color: #00ff8c; border-radius: 10px; border-style: hidden;font-size: 20px;">Cadastrar Carro</button>
+            <button type="button" data-toggle="modal" data-target="#cadastrarModal" style="background-color: #00ff8c; border-radius: 10px; border-style: hidden;font-size: 25px;">Cadastrar Carro</button>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="cadastrarModalLabel">Editar Carro</h4>
+                <h4 class="modal-title" style="font-size: 35px;" id="cadastrarModalLabel">Editar Carro</h4>
             </div>
             <div class="modal-body" style="text-align: center;">
                 <input type="text" id="fplaca" name="fplaca" placeholder="Placa"><br><br>
@@ -36,8 +36,8 @@
                 <input type="text" id="fmodelo" name="fmodelo" placeholder="Modelo"><br><br>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" onclick="cadastrarCarro()" class="btn btn-primary">Cadastrar Carro</button>
+                <button type="button" class="gray-button" style="font-size: 20px;" data-dismiss="modal">Close</button>
+                <button type="button" onclick="cadastrarCarro()" class="green-button">Cadastrar Carro</button>
             </div>
             </div>
         </div>
@@ -50,8 +50,8 @@
                     <th> Placa </th>
                     <th> Marca </th>
                     <th> Modelo </th>
-                    <th> Delete </th>
-                    <th> Edit </th>
+                    <th> Editar </th>
+                    <!-- <th> Edit </th> -->
                 </tr>
             </thead>
 
@@ -65,7 +65,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Editar Carro</h4>
+                <h4 class="modal-title" style="font-size: 35px;" id="myModalLabel">Editar Carro</h4>
             </div>
             <div class="modal-body">
                 <label for="modalPlaca">Placa:</label>
@@ -76,8 +76,8 @@
                 <input type="text" id="modalModelo"><br>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" onclick="salvarEdicaoCarro()" class="btn btn-primary">Salvar Mudanças</button>
+                <button type="button" class="gray-button" style="font-size: 20px;" data-dismiss="modal">Close</button>
+                <button type="button" onclick="salvarEdicaoCarro()" class="green-button">Salvar Mudanças</button>
             </div>
             </div>
         </div>
