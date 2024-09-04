@@ -1,0 +1,26 @@
+h1{
+    color: white
+}
+/* https://coolors.co/034732-008148-c6c013-ef8a17-ef2917 */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes spacing between borders */
+  }
+  
+  th, td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 8px; /* Padding inside cells */
+    text-align: center; /* Align text to the left */
+  }
+  
+  th {
+    background-color: #f3f3f3; /* Light gray background for header cells */
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for rows */
+  } */
+  
+  tr:hover {
+    background-color: #eaeaea; /* Highlight row on hover */
+  }
