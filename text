@@ -1,0 +1,11 @@
+create table carro(
+placa varchar(7),
+marca varchar(20),
+modelo varchar(20),
+primary key (placa)
+);
+
+insert into carro values('fhe3l50', 'Honda', 'City');
+insert into carro values('oiu3j66', 'Honda', 'Fit');
+insert into carro values('fhe3l70', 'VW', 'Polo');
+insert into carro values('fhe3l57', 'GM', 'S10');
