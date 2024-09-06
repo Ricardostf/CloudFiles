@@ -8,7 +8,7 @@ $username = "sa";
 $password = "YourStrongP@ssw0rd!";
 $dbname = "crudGF";
 $port = 1433;
- 
+
 $conn = new PDO("dblib:host={$servername}:{$port};dbname={$dbname}", $username, $password);
 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

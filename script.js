@@ -39,6 +39,13 @@ function cadastrarCarroBD() {
     }
 }
 
+function mostrarModal(tipo){
+
+    $("#myModal").modal('Show');
+
+}
+
+
 async function getCarrosBD(action, placa = null) {
     // console.log(action)
     try {
