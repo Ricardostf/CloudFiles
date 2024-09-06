@@ -90,7 +90,7 @@ async function salvarEdicaoCarro() {
             body.append("action", "update");
             body.append("placa", placa);
             body.append("marca", marca);
-            body.append("modelo", mode  lo);
+            body.append("modelo", modelo);
             console.log(body);
             const response = await fetch('db/crudCarro.php', {
                 method: 'POST',
